@@ -5,6 +5,9 @@ import image1 from "../assets/image1.png";
 import Navbar from "./navbar/navbar.js";
 import image2 from "../assets/image2.png";
 import image3 from "../assets/image3.png";
+import Footer from "./footer/footer";
+
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,13 +25,10 @@ export default function Home() {
             <p className="text-orange-200">Manage Wealth</p>
           </div>
           <div className="flex flex-row gap-x-10 mx-10 pt-6">
-            <button className="text-white rounded-4xl border-white outline-1 px-20 h-10">
-              Learn More
-            </button>
-            <button className="text-white rounded-4xl bg-orange-500 px-20 h-10 flex items-center gap-2">
-              Try Now
+            <Link href="/expensetracker" className="text-white rounded-4xl bg-orange-500 px-20 h-10 flex items-center gap-2">
+              <p>Try Now</p>
               <span>&rarr;</span>
-            </button>
+            </Link>
           </div>
         </div>
         <div className="text-white w-[50%] px-20">
@@ -47,10 +47,12 @@ export default function Home() {
             offering personalized tax advice and financial guidance, ensuring
             you get the most out of your income.
           </p>
-          <button className="text-white rounded-4xl bg-orange-500 px-20 h-10 mx-10 flex items-center gap-2">
-            Try Now
-            <span>&rarr;</span>
-          </button>
+          <div className="flex flex-row gap-x-10 mx-10 pt-6">
+            <Link href="/chatbot" className="text-white rounded-4xl bg-orange-500 px-20 h-10 flex items-center gap-2">
+              <p>Try Now</p>
+              <span>&rarr;</span>
+            </Link>
+          </div>
         </div>
         <div className="w-[50%] mx-10">
           <Image src={image2} width={400} height={400} alt="image" />
@@ -66,32 +68,35 @@ export default function Home() {
           <Image src={image3} width={300} height={300} alt="image" />
         </div>
 
-        <div class="bg-black text-white p-6 space-y-4 max-w-lg mx-auto">
-          <ul class="space-y-4 text-lg">
-            <li class="flex items-start space-x-3">
-              <span class="text-green-500">✔️</span>
+        <div className="bg-black text-white p-6 space-y-4 max-w-lg mx-auto">
+          <ul className="space-y-4 text-lg">
+            <li className="flex items-start space-x-3">
+              <span className="text-green-500">✔️</span>
               <span>Track expenses and manage spending.</span>
             </li>
-            <li class="flex items-start space-x-3">
-              <span class="text-green-500">✔️</span>
+            <li className="flex items-start space-x-3">
+              <span className="text-green-500">✔️</span>
               <span>Stay updated with the latest news.</span>
             </li>
-            <li class="flex items-start space-x-3">
-              <span class="text-green-500">✔️</span>
+            <li className="flex items-start space-x-3">
+              <span className="text-green-500">✔️</span>
               <span>Learn smart finance step-by-step.</span>
             </li>
-            <li class="flex items-start space-x-3">
-              <span class="text-green-500">✔️</span>
+            <li className="flex items-start space-x-3">
+              <span className="text-green-500">✔️</span>
               <span>Ask, share, discuss, and grow financially.</span>
             </li>
           </ul>
 
-          <button className="text-white rounded-4xl bg-orange-500 px-20 h-10 mx-10 flex items-center gap-2">
-            Try Now
-            <span>&rarr;</span>
-          </button>
+          <div className="flex flex-row gap-x-10 mx-10 pt-6">
+            <Link href="/forums" className="text-white rounded-4xl bg-orange-500 px-20 h-10 flex items-center gap-2">
+              <p>Try Now</p>
+              <span>&rarr;</span>
+            </Link>
+          </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
