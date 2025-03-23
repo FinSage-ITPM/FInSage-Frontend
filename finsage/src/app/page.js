@@ -12,7 +12,7 @@ export default function Home() {
       {" "}
       {/* Properly opening the JSX fragment */}
       <Navbar />
-      <div className="flex flex-row">
+      <div className="flex flex-row my-10">
         <div className="bg-gradient-to-r from-orange-500 to-orange-100 bg-clip-text text-transparent w-[50%] p-10">
           <p className={`text-5xl font-semibold p-8`}>
             Simplified Finance Personalized to Your Needs.
@@ -35,12 +35,12 @@ export default function Home() {
           <Image src={image1} width={400} height={400} alt="image" />
         </div>
       </div>
-      <div className="bg-gradient-to-r from-orange-500 to-orange-100 bg-clip-text text-transparent p-10 text-center">
+      <div className="bg-gradient-to-r from-orange-500 to-orange-100 bg-clip-text text-transparent p-10 text-center my-10">
         <p className="text-4xl font-semibold">
           Empowering Young Adults to Make Smarter Financial Decisions
         </p>
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-row my-10">
         <div className="w-[50%] p-10">
           <p className="text-white text-xl p-10">
             Our chatbot is designed for the new earners and young adults,
